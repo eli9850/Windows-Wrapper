@@ -50,7 +50,7 @@ namespace WindowsWrapper::Wrappers
 			API::PipeAPI::get_number_of_bytes_to_read(m_pipe_handle.get());
 			return true;
 		}
-		catch (const PipeException& e)
+		catch (const PipeException&)
 		{
 			return false;
 		}

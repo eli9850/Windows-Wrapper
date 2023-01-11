@@ -70,7 +70,7 @@ namespace WindowsWrapper::API::PipeAPI
 	Wrappers::Overlapped connect_named_pipe_async(HANDLE pipe)
 	{
 		Wrappers::Overlapped overlapped_result(pipe);
-		const auto result = ConnectNamedPipe(pipe, &(overlapped_result.get_overlapped()));
+		const auto result = ConnectNamedPipe(pipe, &overlapped_result.get_overlapped());
 		if (!result)
 		{
 			const auto error = GetLastError();
